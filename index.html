@@ -1,12 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>多种手风琴效果整合</title>
+<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<link rel="stylesheet" href="css/accordion.css">
 </head>
 <body>
-    nihao
+    <div class="main">
+        <div class="title">晓丹小仙女！</div>
+        <div class="w-accor w-accor0" id="Accor0">
+            <ul class="swiper-wrapper clearfix">
+                <li class="swiper-slide">
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="image/b1.png"/></div>
+                        </div>
+                        <a href="#"></a>
+                </li>
+                <li class="swiper-slide">
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="image/b2.png"/></div>
+                        </div>
+                        <a href="#"></a>
+                </li>
+                <li class="swiper-slide">
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="image/b3.png"/></div>
+                        </div>
+                        <a href="#"></a>
+                </li>
+                <li class="swiper-slide">
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="image/b4.png"/></div>
+                        </div>
+                        <a href="#"></a>
+                </li>
+                <li class="swiper-slide">
+                    <div class="item clearfix">
+                        <div class="img_ar"><img src="image/b5.png"/></div>
+                        </div>
+                        <a href="#"></a>
+                </li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+        $(function(){
+            if($(window).width()>640){
+            accor($('#Accor0'),'40%',500,true,false); //参数1:Dom节点，参数2：展开图宽度(值可正数像素值或百分比）、参数3：速度（ms）、参数4：初始是否展开（是true，否false）、参数5：是否点击展开（是true，否false）
+            }else{
+                var swiper = new Swiper('#Accor0', {
+                    effect : 'slide',
+                    loop : true,
+                    speed:300,
+                    autoplay : {
+                       delay:3000,//展示时间
+                        disableOnInteraction: false
+                    }
+                });
+            }
+        });
+        </script>
+    </div>
+    <script src="js/accordion.js"></script> 
+    <!--手机-->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="js/swiper.min.js"></script>    
 </body>
-</html>
